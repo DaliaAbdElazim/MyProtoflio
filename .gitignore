@@ -102,7 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+# .env
 .venv
 env/
 venv/
@@ -188,13 +188,13 @@ alembic/
 certificates/
 
 # templates
-templates/
+# templates/
 
 # static
-static/
+# static/
 
 # Shell scripts
-*.sh
+# *.sh
 
 # Deploy.md
 DEPLOY.md

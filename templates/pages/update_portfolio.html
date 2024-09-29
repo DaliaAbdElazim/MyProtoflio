@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Update {{ portfolio.name }}'s Portfolio</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-pro.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon_gerold.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/backToTop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/odometer-theme-default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/light-mode.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+    <!-- Preloader Area Start -->
+    <div class="preloader">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+
+        <div class="preloader-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Area End -->
+
+    <!-- HEADER START -->
+    <main class="site-content" id="content">
+        <div class="container mt-2">
+            <h3 class="text-center">Update {{ portfolio.name }}'s Portfolio</h1>
+            <form method="POST" enctype="multipart/form-data" class="p-3 border rounded shadow-sm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name" value="{{ portfolio.name }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="form-control" placeholder="Enter your title" value="{{ portfolio.title }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input type="text" name="bio" class="form-control" placeholder="Short bio" value="{{ portfolio.bio }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" value="{{ portfolio.email }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="linkedin_link">LinkedIn Link</label>
+                    <input type="url" name="linkedin_link" class="form-control" placeholder="LinkedIn URL" value="{{ portfolio.linkedin_link }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="github_link">GitHub Link</label>
+                    <input type="url" name="github_link" class="form-control" placeholder="GitHub URL" value="{{ portfolio.github_link }}">
+                </div>
+    
+                <div class="form-group">
+                    <label for="cv_link">CV Link</label>
+                    <input type="url" name="cv_link" class="form-control" placeholder="CV URL" value="{{ portfolio.cv_link }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile_picture">Profile Picture</label>
+                    <input type="url" name="profile_picture_url" class="form-control" placeholder="Profile Picture URL" value="{{ portfolio.profile_picture_url }}">
+                </div>
+    
+                <button type="submit" class="btn btn-primary btn-block mt-2">Update Portfolio</button>
+            </form>
+            <a href="{{ url_for('view_portfolio') }}" class="btn btn-secondary mt-2 d-block">Back to Portfolio</a>
+        </div>
+    </main>    
+
+    <!-- JSS here -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nice-select.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/backToTop.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/appear.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gsap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lenis.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightcase.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/swiper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imagesloaded-pkgd.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/odometer.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
